@@ -51,8 +51,8 @@ window.onload = function () {
     });
 
     function submitButton() {
-        if (($('#firstName').val() && $('#lastName').val() && !$('#newsletter').is(':checked') && !$('#email').val()) ||
-            ($('#firstName').val() && $('#lastName').val() && $('#newsletter').is(':checked') && $('#email').val())) {
+        if ($('#firstName').val() && $('#lastName').val() && ((!$('#newsletter').is(':checked') && !$('#email').val()) ||
+            ($('#newsletter').is(':checked') && $('#email').val()))) {
             $(":submit").prop("disabled", false);
         } else {
             $(":submit").prop("disabled", true);
